@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f4ec" />
+    <meta name="description" content="ElderCare Rajasthan — a simple daily support dashboard for older adults and caregivers." />
+    <title>ElderCare Rajasthan</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-en="Skip to content">मुख्य सामग्री पर जाएँ</a>
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="ElderCare Rajasthan home">
+        <span class="brand-mark" aria-hidden="true">ई</span>
+        <span><strong>ElderCare</strong><small>राजस्थान</small></span>
+      </a>
+      <div class="top-actions">
+        <span class="date-label" id="today-date"></span>
+        <button class="language-button" id="language-toggle" type="button" aria-label="Switch language">English</button>
+      </div>
+    </header>
+
+    <main id="main" class="page-shell">
+      <section class="welcome" id="home" aria-labelledby="welcome-title">
+        <div>
+          <p class="eyebrow" data-en="YOUR DAILY COMPANION">आपका रोज़ का साथी</p>
+          <h1 id="welcome-title" data-en="Namaste, how are you today?">नमस्ते, आज आप कैसे हैं?</h1>
+          <p class="welcome-copy" data-en="A little support, one day at a time.">हर दिन, थोड़ी सी मदद और अपनापन।</p>
+        </div>
+        <div class="sun-illustration" aria-hidden="true"><span>☀</span><i></i><b></b></div>
+      </section>
+
+      <div class="demo-note"><span aria-hidden="true">ⓘ</span><span data-en="Sample information is shown. This is a starter demo; it does not contact anyone.">यह नमूना जानकारी है। यह शुरुआती डेमो है और किसी को संदेश नहीं भेजता।</span></div>
+
+      <section class="checkin card" aria-labelledby="checkin-title">
+        <div class="section-heading">
+          <div><p class="eyebrow" data-en="DAILY CHECK-IN">आज का हाल</p><h2 id="checkin-title" data-en="How are you feeling?">आज आपका मन कैसा है?</h2></div>
+          <span class="today-chip" data-en="TODAY">आज</span>
+        </div>
+        <p class="muted" data-en="Choose the answer that feels right for you.">जो सही लगे, वह जवाब चुनें।</p>
+        <div class="mood-options" role="group" aria-label="आज का हाल चुनें" data-en-label="Choose today's feeling">
+          <button class="mood-button mood-good" data-mood="good" type="button"><span aria-hidden="true">☺</span><b data-en="Good">अच्छा</b></button>
+          <button class="mood-button mood-okay" data-mood="okay" type="button"><span aria-hidden="true">◡</span><b data-en="Okay">सामान्य</b></button>
+          <button class="mood-button mood-help" data-mood="help" type="button"><span aria-hidden="true">♡</span><b data-en="I need support">मुझे मदद चाहिए</b></button>
+        </div>
+        <p class="feedback" id="checkin-feedback" role="status" aria-live="polite"></p>
+        <p class="fine-print" data-en="This check-in is for your own notes. It does not diagnose a health condition or alert a caregiver.">यह हाल सिर्फ आपके रिकॉर्ड के लिए है। यह बीमारी की पहचान नहीं करता और किसी देखभालकर्ता को सूचना नहीं भेजता।</p>
+      </section>
+
+      <div class="section-title"><div><p class="eyebrow" data-en="A GENTLE REMINDER">एक छोटी याद</p><h2 data-en="Coming up today">आज की जानकारी</h2></div></div>
+      <div class="info-grid">
+        <section class="card info-card" aria-labelledby="reminders-title">
+          <div class="card-icon icon-peach" aria-hidden="true">◷</div>
+          <div class="card-title-row"><h3 id="reminders-title" data-en="Medicine reminders">दवा की याद</h3><span class="sample-tag" data-en="SAMPLE">नमूना</span></div>
+          <div class="list-item"><span class="time-pill">09:00</span><span><b data-en="Morning reminder">सुबह की याद</b><small data-en="Example only — add your own details">सिर्फ उदाहरण — अपनी जानकारी जोड़ें</small></span></div>
+          <p class="fine-print" data-en="Reminders are informational and do not confirm that medicine was taken.">यह सिर्फ याद दिलाने की जानकारी है; इससे दवा लेने की पुष्टि नहीं होती।</p>
+        </section>
+        <section class="card info-card" aria-labelledby="appointment-title">
+          <div class="card-icon icon-blue" aria-hidden="true">▣</div>
+          <div class="card-title-row"><h3 id="appointment-title" data-en="Appointments">मुलाक़ातें</h3><span class="sample-tag" data-en="SAMPLE">नमूना</span></div>
+          <div class="empty-state"><span aria-hidden="true">☼</span><p data-en="No upcoming appointments in this demo.">इस डेमो में कोई आने वाली मुलाक़ात नहीं है।</p></div>
+        </section>
+      </div>
+
+      <section class="card people-card" id="contacts" aria-labelledby="people-title">
+        <div class="card-icon icon-green" aria-hidden="true">♡</div>
+        <div class="people-content"><div class="card-title-row"><h3 id="people-title" data-en="People who care">अपने लोग</h3><span class="sample-tag" data-en="SAMPLE">नमूना</span></div><p class="muted" data-en="Caregiver and emergency contact details can be added in a future version.">देखभालकर्ता और आपातकालीन संपर्क की जानकारी आगे के संस्करण में जोड़ी जा सकती है।</p></div>
+      </section>
+
+      <footer><span data-en="Made for everyday support in Rajasthan">राजस्थान में रोज़मर्रा की मदद के लिए</span><span>•</span><a href="#privacy" id="privacy-link" data-en="Privacy">गोपनीयता</a></footer>
+      <p class="privacy-note" id="privacy" data-en="Your check-in is saved only in this browser on this device. Clearing browser data will remove it. Do not enter sensitive medical information in this demo.">आपका आज का हाल सिर्फ इसी डिवाइस के ब्राउज़र में सहेजा जाता है। ब्राउज़र का डेटा मिटाने पर यह भी मिट जाएगा। इस डेमो में निजी स्वास्थ्य जानकारी न डालें।</p>
+    </main>
+  </body>
+</html>
